@@ -7,7 +7,7 @@ const routes = express.Router();
 routes.get("/",async(req,res)=>{
     try {
         const getUsers = await myModel.find();
-        res.send("hello");
+        res.json(getUser);
     } catch (error) {
         res.send(error);
     }
